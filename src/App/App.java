@@ -3,7 +3,7 @@ package App;
 //TUDO SALVO NO APP
 
 public class App {
-    private int numConversions, tickets, viewMinutes, points;
+    private int numConversions, viewMinutes, points;
     Usuario usuario = new Usuario();
 
     public int getNumConversions() {
@@ -14,13 +14,6 @@ public class App {
         this.numConversions = numConversions;
     }
 
-    public int getTickets() {
-        return tickets;
-    }
-
-    public void setTickets(int tickets) {
-        this.tickets = tickets;
-    }
 
     public int getViewMinutes() {
         return viewMinutes;
@@ -57,10 +50,10 @@ public class App {
 
     public int conversionPointsToTickets() {
         if (points >= 10) {
-            tickets += points / 10;
+            usuario.tickets += points / 10;
             points = points % 10;
         }
-        return tickets;
+        return usuario.tickets;
     }
 }
 

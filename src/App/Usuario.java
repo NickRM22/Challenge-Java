@@ -5,17 +5,24 @@ package App;
 public class Usuario extends App {
     private String name, userName, password;
     private int cpf;
-    protected int ticketObtained;
+    protected int tickets = 0;
 
-    public Usuario(String name, String userName, String password, int cpf, int ticketObtained) {
+    public Usuario(String name, String userName, String password, int cpf, int tickets) {
         this.name = name;
         this.userName = userName;
         this.password = password;
         this.cpf = cpf;
-        this.ticketObtained = ticketObtained;
+        this.tickets = tickets;
     }
 
     public Usuario() {
+    }
+    public int getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(int tickets) {
+        this.tickets = tickets;
     }
 
     public String getName() {
@@ -56,12 +63,5 @@ public class Usuario extends App {
         }
     }
 
-    public int getTicketObtained() {
-        return ticketObtained;
-    }
-
-    public void setTicketObtained(int ticketObtainesd) {
-        this.ticketObtained = ticketObtainesd;
-    }
 }
 
