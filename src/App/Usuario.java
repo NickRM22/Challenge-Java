@@ -1,23 +1,18 @@
 package App;
 
+//TUDO QUE O USUARIO TEM QUE REGISTRAR
+
 public class Usuario extends App {
-    private String name;
+    private String name, userName, password;
     private int cpf;
-    protected int points;
-    private String userName;
-    private String password;
     protected int ticketObtained;
 
-    public Usuario(String name, int cpf, int points, String userName, String password, int ticketObtained) {
+    public Usuario(String name, String userName, String password, int cpf, int ticketObtained) {
         this.name = name;
-        this.cpf = cpf;
-        this.points = points;
         this.userName = userName;
         this.password = password;
+        this.cpf = cpf;
         this.ticketObtained = ticketObtained;
-        super.getNumConversions();
-        super.getTickets();
-        super.getViewMinutes();
     }
 
     public Usuario() {
@@ -37,14 +32,6 @@ public class Usuario extends App {
 
     public void setCpf(int cpf) {
         this.cpf = cpf;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
     }
 
     public String getUserName() {
