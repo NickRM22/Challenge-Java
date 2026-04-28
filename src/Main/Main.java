@@ -1,4 +1,7 @@
 package Main;
+
+import Application.Usuario;
+
 /**
  * @author Nicolas Martins, Vinicius Soares, Caua Bertini, Henrique Soares, Nicolas Frazão
  * @version 1.2
@@ -6,5 +9,6 @@ package Main;
  */
 public class Main {
     public static void main(String[] args) {
+
     }
 }

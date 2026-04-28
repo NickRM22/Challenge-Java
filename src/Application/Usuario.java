@@ -1,28 +1,20 @@
-package App;
+package Application;
 
 //TUDO QUE O USUARIO TEM QUE REGISTRAR
 
-public class Usuario extends App {
-    private String name, userName, password;
-    private int cpf;
-    protected int tickets = 0;
+import java.util.Scanner;
 
-    public Usuario(String name, String userName, String password, int cpf, int tickets) {
+public class Usuario extends App {
+    private String name, userName, password, cpf;
+
+    Scanner sc = new Scanner(System.in);
+
+    public Usuario(int viewMinutes, int numConversions, String name, String userName, String password, String cpf) {
+        super(viewMinutes, numConversions);
         this.name = name;
         this.userName = userName;
         this.password = password;
         this.cpf = cpf;
-        this.tickets = tickets;
-    }
-
-    public Usuario() {
-    }
-    public int getTickets() {
-        return tickets;
-    }
-
-    public void setTickets(int tickets) {
-        this.tickets = tickets;
     }
 
     public String getName() {
@@ -33,12 +25,18 @@ public class Usuario extends App {
         this.name = name;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
+
+    public void setCpf(String cpf) {
+        if (cpf.length() == 11) {
+            System.out.println("CPF cadastrado com sucesso");
+        } else {
+            System.out.println("ERRO, cadastre um CPF válido. (Onze dígitos sem pontuação)");
+        }
+            this.cpf = cpf;
     }
 
     public String getUserName() {
