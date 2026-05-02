@@ -1,12 +1,8 @@
 package Application;
 
-public class Points extends App {
+public class Points {
     private int points;
-
-    public Points(int viewMinutes, int numConversions, int points) {
-        super(viewMinutes, numConversions);
-        this.points = points;
-    }
+    Usuario usuario = new Usuario();
 
     public int getPoints() {
         return points;
@@ -16,10 +12,11 @@ public class Points extends App {
         this.points = points;
     }
 
-    public void conversionViewsToPoints() {
-        if (super.getViewMinutes() >= 180) {
-            points += super.getViewMinutes() / 180;
-            super.setViewMinutes(super.getViewMinutes() % 180);
+    public int conversionViewsForPoints() {
+        if (usuario.getViewMinutes() >= 180) {
+            points += usuario.getViewMinutes() / 180;
+            usuario.setViewMinutes(usuario.getViewMinutes() % 180);
         }
+        return points;
     }
 }

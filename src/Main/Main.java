@@ -4,7 +4,7 @@ import Application.Usuario;
 
 /**
  * @author Nicolas Martins, Vinicius Soares, Caua Bertini, Henrique Soares, Nicolas Frazão
- * @version 1.2
+ * @version 1.3
  * @since 1.0
  */
 public class Main {

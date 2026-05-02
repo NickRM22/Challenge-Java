@@ -2,41 +2,45 @@ package Application;
 
 //TUDO QUE O USUARIO TEM QUE REGISTRAR
 
-import java.util.Scanner;
-
-public class Usuario extends App {
+public class Usuario {
     private String name, userName, password, cpf;
+    private int viewMinutes;
+    private Tickets tickets;
+    private Points points;
 
-    Scanner sc = new Scanner(System.in);
-
-    public Usuario(int viewMinutes, int numConversions, String name, String userName, String password, String cpf) {
-        super(viewMinutes, numConversions);
+    public Usuario(String name, String userName, String password, String cpf, int viewMinutes) {
         this.name = name;
         this.userName = userName;
         this.password = password;
         this.cpf = cpf;
+        this.viewMinutes = viewMinutes;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Usuario() {
     }
 
     public String getCpf() {
         return cpf;
     }
 
-
     public void setCpf(String cpf) {
-        if (cpf.length() == 11) {
-            System.out.println("CPF cadastrado com sucesso");
-        } else {
-            System.out.println("ERRO, cadastre um CPF válido. (Onze dígitos sem pontuação)");
-        }
-            this.cpf = cpf;
+        this.cpf = cpf;
+    }
+
+    public int getViewMinutes() {
+        return viewMinutes;
+    }
+
+    public void setViewMinutes(int viewMinutes) {
+        this.viewMinutes = viewMinutes;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUserName() {
@@ -47,19 +51,11 @@ public class Usuario extends App {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-    public void setPassword(String password) {
-        if (password.length() >= 4 && password.length() <= 8) {
-            this.password = password;
-            System.out.println("Senha criada com sucesso!");
-        } else {
-            System.out.println("Senha deve ter entre 4 e 8 caracteres");
-            this.password = password;
-        }
+    public void setName(String name) {
+        this.name = name;
     }
-
 }
-

@@ -1,12 +1,8 @@
 package Application;
 
-public class Tickets extends Points {
+public class Tickets {
     private int tickets;
-
-    public Tickets(int viewMinutes, int numConversions, int points, int tickets) {
-        super(viewMinutes, numConversions, points);
-        this.tickets = tickets;
-    }
+    Points points = new Points();
 
     public int getTickets() {
         return tickets;
@@ -16,10 +12,10 @@ public class Tickets extends Points {
         this.tickets = tickets;
     }
 
-    public int conversionPointsToTickets() {
-        if (super.getPoints() >= 10) {
-            tickets += getPoints() / 10;
-            super.setPoints(super.getPoints() % 10);
+    private int simularUso() {
+        if (points.getPoints() >= 10) {
+            tickets += points.getPoints() / 10;
+            points.setPoints(points.getPoints() % 10);
         }
         return tickets;
     }
