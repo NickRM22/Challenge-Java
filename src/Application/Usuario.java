@@ -8,12 +8,11 @@ public class Usuario {
     private Tickets tickets;
     private Points points;
 
-    public Usuario(String name, String userName, String password, String cpf, int viewMinutes) {
+    public Usuario(String name, String userName, String password, String cpf) {
         this.name = name;
         this.userName = userName;
         this.password = password;
         this.cpf = cpf;
-        this.viewMinutes = viewMinutes;
     }
 
     public Usuario() {
